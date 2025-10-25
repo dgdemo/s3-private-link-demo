@@ -1,4 +1,10 @@
 # s3-private-link-demo
+![Status](https://img.shields.io/badge/status-in_progress-yellow)
+
+> 🚧 **Work in Progress**
+>
+> This demo is being rebuilt to showcase how to securely access Amazon S3 using AWS PrivateLink (Interface VPC Endpoints).  
+> The project currently focuses on Terraform automation and a minimal EC2 test environment.
 
 ## Description:
 Learn to establish secure AWS PrivateLink connections between two accounts for Amazon S3. No public internet access needed. Easy setup with AWS CLI.
