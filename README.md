@@ -29,14 +29,16 @@ This project provides a step-by-step guide and AWS CLI-driven workflow to create
 
 ```mermaid
 flowchart LR
-    subgraph ClientVPC["Client VPC"]
-        EC2["EC2 (SSH Access)"]
-        VPCE["Interface VPC Endpoint"]
+    subgraph Consumer["Consumer Account (Client)"]
+        subgraph ClientVPC["Client VPC"]
+            EC2["EC2 (SSH Access)"]
+            VPCE["Interface VPC Endpoint"]
+        end
     end
 
-    DNS["Private DNS\n(s3.amazonaws.com)"]
+    DNS["Private DNS<br/>(s3.amazonaws.com)"]
 
-    subgraph AWSService["AWS Service Account"]
+    subgraph Provider["Provider Account (Service)"]
         S3["S3 Bucket"]
     end
 
@@ -44,7 +46,8 @@ flowchart LR
     VPCE --> DNS
     DNS --> S3
 
-    style AWSService stroke-dasharray: 5 5
+    style Consumer stroke-dasharray: 5 5
+    style Provider stroke-dasharray: 5 5
 ```
 ---
 
